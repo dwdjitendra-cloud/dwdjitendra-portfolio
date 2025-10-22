@@ -124,7 +124,7 @@ export default function About() {
               className="space-y-6"
             >
               <div className="card-enhanced p-8">
-                <h3 className="text-2xl font-bold text-blue-300 mb-4">🚀 My Story</h3>
+                <h3 className="text-2xl font-bold text-blue-300 mb-4">🚀 About Me</h3>
                 <p className="text-gray-300 leading-relaxed mb-4">
                   I'm a Computer Science Engineering student at Indian Institute of Engineering Science and Technology (IIEST) Shibpur, passionate about creating 
                   impactful digital solutions. My journey spans full-stack development, AI/ML engineering, 

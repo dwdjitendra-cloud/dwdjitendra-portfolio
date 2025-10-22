@@ -17,44 +17,42 @@ html {
 }
 
 body {
-  background: linear-gradient(135deg, #0a0b1e 0%, #1a1b3a 50%, #0f1419 100%);
-  background-attachment: fixed;
-  overflow-x: hidden;
-  color: #e2e8f0;
+  background: #f8fafc; /* Light background */
+  color: #1e293b; /* Dark gray text */
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
-/* Enhanced scrollbar with blue theme */
+/* Update scrollbar to match light theme */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(15, 20, 25, 0.8);
+  background: #e5e7eb; /* Light gray */
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #3b82f6, #1d4ed8, #1e40af);
+  background: linear-gradient(180deg, #2563eb, #1e3a8a); /* Indigo gradient */
   border-radius: 5px;
-  border: 1px solid rgba(59, 130, 246, 0.3);
+  border: 1px solid rgba(37, 99, 235, 0.3);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #60a5fa, #3b82f6, #2563eb);
-  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+  background: linear-gradient(180deg, #60a5fa, #2563eb); /* Light blue gradient */
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.5);
+}
+
+/* Glassmorphism adjustments for light theme */
+.glass {
+  background: rgba(37, 99, 235, 0.08); /* Light blue tint */
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(37, 99, 235, 0.2);
 }
 
 /* Advanced glassmorphism effects */
-.glass {
-  background: rgba(59, 130, 246, 0.08);
-  backdrop-filter: blur(20px) saturate(120%);
-  border: 1px solid rgba(59, 130, 246, 0.2);
-  box-shadow: 
-    inset 0 1px 0 rgba(255, 255, 255, 0.1),
-    0 20px 40px rgba(0, 0, 0, 0.3);
-}
-
 .glass-dark {
   background: rgba(15, 20, 25, 0.6);
   backdrop-filter: blur(25px) saturate(150%);
@@ -131,11 +129,7 @@ body {
 
 /* Particle and background effects */
 .cosmic-bg {
-  background: 
-    radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(29, 78, 216, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(30, 64, 175, 0.1) 0%, transparent 50%),
-    linear-gradient(135deg, #0a0b1e 0%, #1a1b3a 50%, #0f1419 100%);
+  background: linear-gradient(135deg, #0a0b1e 0%, #1a1b3a 50%, #0f1419 100%);
   background-attachment: fixed;
 }
 
