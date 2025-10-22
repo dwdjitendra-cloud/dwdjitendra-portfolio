@@ -37,6 +37,14 @@ export default function Projects() {
       liveDemo: 'https://spam-detector-vxjd.onrender.com/',
       githubRepo: 'https://github.com/dwdjitendra-cloud/spam-detector',
     },
+    {
+      title: 'Kube Credential System',
+      description:
+        'A complete microservices-based credential issuance and verification system built with Node.js, TypeScript, MongoDB Atlas, Docker, and Kubernetes. This system demonstrates production-grade microservices architecture with containerization and orchestration capabilities.',
+      techStack: ['React', 'Node.js', 'TypeScript', 'MongoDB Atlas', 'Docker', 'Kubernetes'],
+      liveDemo: 'https://kube-credential-chi-pied.vercel.app',
+      githubRepo: 'https://github.com/dwdjitendra-cloud/kube-credential',
+    },
   ];
   return (
     <section id="projects" className="py-12 md:py-20 px-4 md:px-6 max-w-7xl mx-auto">
