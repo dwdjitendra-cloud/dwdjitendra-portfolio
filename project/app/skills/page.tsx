@@ -96,7 +96,7 @@ export default function SkillsPage() {
         radius: 360,
         skills: [
           { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
-          { name: "MySQL", icon: SiMysql, color: "#4479A1" },
+          { name: "SQL", icon: TbDatabase, color: "#3B82F6" },
         ],
       },
       {

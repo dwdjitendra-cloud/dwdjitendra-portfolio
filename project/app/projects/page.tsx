@@ -45,6 +45,15 @@ export default function Projects() {
       liveDemo: 'https://kube-credential-chi-pied.vercel.app',
       githubRepo: 'https://github.com/dwdjitendra-cloud/kube-credential',
     },
+    {
+      title: 'Shadow Removal Project (In Progress)',
+      description:
+        'Detecting and removing shadows from images using ML/CV to improve recognition, segmentation, and object detection.',
+      techStack: ['Machine Learning', 'Computer Vision'],
+      liveDemo: '',
+      githubRepo: '',
+      tags: ['Final Year College Project'],
+    },
   ];
   return (
     <section id="projects" className="py-12 md:py-20 px-4 md:px-6 max-w-7xl mx-auto">
