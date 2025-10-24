@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  images: { unoptimized: true },
+  // Use default server output for full React 18/Next.js features (no static export)
   reactStrictMode: true,
 };
 
