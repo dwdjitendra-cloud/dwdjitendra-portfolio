@@ -16,12 +16,24 @@ declare module "@react-three/drei" {
 
 // Allow JSX intrinsic elements used by @react-three/fiber
 declare global {
+  // TS <=5 React 18 style augmentation
   namespace JSX {
     interface IntrinsicElements {
       group: any;
       ambientLight: any;
       pointLight: any;
       meshStandardMaterial: any;
+    }
+  }
+  // TS 5 / React 19 JSX runtime augmentation
+  namespace React {
+    namespace JSX {
+      interface IntrinsicElements {
+        group: any;
+        ambientLight: any;
+        pointLight: any;
+        meshStandardMaterial: any;
+      }
     }
   }
 }
