@@ -58,7 +58,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
   },
-  themeColor: '#0a0b1e',
   verification: {
     // Fill if you set up these services
     google: '',
@@ -66,7 +65,10 @@ export const metadata: Metadata = {
     other: {
       me: ['mailto:dwdjitendra2003@gmail.com']
     }
-  }
+  },
+  viewport: {
+    themeColor: '#0a0b1e',
+  },
 };
 
 export default function RootLayout({
