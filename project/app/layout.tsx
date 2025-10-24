@@ -1,12 +1,8 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import dynamic from 'next/dynamic';
-const Analytics = dynamic(
-  () => import('@vercel/analytics/react').then(mod => mod.Analytics),
-  { ssr: false }
-);
 import ThemeToggle from './components/ThemeToggle';
+import AnalyticsClient from '../components/AnalyticsClient';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -89,7 +85,7 @@ export default function RootLayout({
           <ThemeToggle />
         </header>
         {children}
-        <Analytics />
+  <AnalyticsClient />
       </body>
     </html>
   );
