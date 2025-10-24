@@ -1,7 +1,11 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import { Analytics } from '@vercel/analytics/react';
+import dynamic from 'next/dynamic';
+const Analytics = dynamic(
+  () => import('@vercel/analytics/react').then(mod => mod.Analytics),
+  { ssr: false }
+);
 import ThemeToggle from './components/ThemeToggle';
 
 const inter = Inter({ subsets: ['latin'] });
