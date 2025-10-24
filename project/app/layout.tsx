@@ -66,9 +66,10 @@ export const metadata: Metadata = {
       me: ['mailto:dwdjitendra2003@gmail.com']
     }
   },
-  viewport: {
-    themeColor: '#0a0b1e',
-  },
+};
+
+export const viewport = {
+  themeColor: '#0a0b1e',
 };
 
 export default function RootLayout({
