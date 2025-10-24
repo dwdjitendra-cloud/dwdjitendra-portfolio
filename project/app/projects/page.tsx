@@ -69,7 +69,13 @@ export default function Projects() {
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
           Featured Projects
         </h2>
-        <p className="text-lg md:text-xl text-gray-300">Interactive 3D showcase of my work - Click cards to explore!</p>
+        <p className="text-base md:text-lg text-gray-300 max-w-3xl mx-auto">
+          As a MERN developer and AI enthusiast, I build scalable, user‑centric products. Below are some highlights.
+          <span className="hidden md:inline"> Click a card to explore details.</span>
+          <span className="block mt-2 text-sm text-blue-200">
+            Want the full story? <a href="/about" className="underline hover:text-blue-300">Visit About Me</a>.
+          </span>
+        </p>
       </motion.div>
 
       {/* Interactive 3D Project Cards */}

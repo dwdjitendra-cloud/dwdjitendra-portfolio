@@ -40,7 +40,7 @@ export default function Experience() {
       color: 'from-yellow-400 to-orange-500'
     },
     {
-      title: 'L\'Oreal Boost Scholar',
+      title: "L'Oreal Boost Scholar",
       description: 'Recognized among top Indian undergraduates for leadership and innovation in technology.',
       icon: '⭐',
       color: 'from-pink-400 to-purple-500'
@@ -67,73 +67,85 @@ export default function Experience() {
         </h2>
       </motion.div>
 
-      {/* Experience Timeline */}
+      {/* Experience Timeline (Vertical, single-column for better reading flow) */}
       <div className="mb-20">
         <motion.h3
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className="text-2xl font-bold text-cyan-400 mb-8 text-center"
         >
           Professional Experience
         </motion.h3>
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          viewport={{ once: true }}
+          className="text-center text-gray-300 text-sm md:text-base max-w-3xl mx-auto mb-10"
+        >
+          As a MERN developer and AI enthusiast, I bring scalable, pragmatic solutions to every problem I tackle.
+          <span className="ml-1 text-blue-200">
+            <a href="/about" className="underline hover:text-blue-300">Learn more about me</a>.
+          </span>
+        </motion.p>
 
         <div className="relative">
-          {/* Timeline Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-cyan-500 to-purple-500"></div>
+          {/* Vertical line */}
+          <div className="absolute left-4 md:left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyan-500 to-purple-500" />
 
-          {experiences.map((exp, index) => (
-            <motion.div
-              key={exp.company}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              viewport={{ once: true }}
-              className={`relative flex items-center mb-12 ${
-                index % 2 === 0 ? 'justify-start' : 'justify-end'
-              }`}
-            >
-              <div className={`w-5/12 ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
+          <div className="space-y-10 pl-12 md:pl-16">
+            {experiences.map((exp, index) => (
+              <motion.div
+                key={exp.company}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="relative"
+              >
+                {/* Timeline node */}
+                <motion.span
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  transition={{ delay: index * 0.1 + 0.2 }}
+                  viewport={{ once: true }}
+                  className={`absolute -left-8 md:-left-10 top-3 w-4 h-4 rounded-full ring-4 ring-white/10 ${
+                    exp.color === 'cyan' ? 'bg-cyan-400' : 'bg-purple-400'
+                  }`}
+                />
+
+                {/* Card */}
                 <motion.div
-                  whileHover={{ scale: 1.02, y: -5 }}
-                  className="backdrop-blur-sm bg-white/5 border border-cyan-500/20 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300"
+                  whileHover={{ y: -3, scale: 1.01 }}
+                  className="card-enhanced p-6"
                 >
-                  <h4 className="text-xl font-bold text-cyan-400 mb-2">{exp.role}</h4>
-                  <h5 className="text-lg font-semibold text-purple-400 mb-2">{exp.company}</h5>
-                  <p className="text-gray-400 text-sm mb-4">{exp.duration}</p>
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-2">
+                    <h4 className="text-xl font-bold text-cyan-300">{exp.role}</h4>
+                    <p className="text-gray-400 text-sm">{exp.duration}</p>
+                  </div>
+                  <h5 className="text-lg font-semibold text-purple-300 mb-3">{exp.company}</h5>
                   <p className="text-gray-300 mb-4">{exp.description}</p>
-                  
                   <ul className="space-y-2">
                     {exp.achievements.map((achievement, achIndex) => (
                       <motion.li
                         key={achIndex}
-                        initial={{ opacity: 0, x: -20 }}
+                        initial={{ opacity: 0, x: -10 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ delay: (index * 0.2) + (achIndex * 0.1) }}
+                        transition={{ delay: (index * 0.1) + (achIndex * 0.05) }}
                         viewport={{ once: true }}
-                        className="text-sm text-gray-300 flex items-center"
+                        className="text-sm text-gray-300 flex items-start"
                       >
-                        <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
+                        <span className="mt-1 mr-2 w-1.5 h-1.5 rounded-full bg-cyan-400" />
                         {achievement}
                       </motion.li>
                     ))}
                   </ul>
                 </motion.div>
-              </div>
-
-              {/* Timeline Dot */}
-              <motion.div
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                transition={{ delay: index * 0.2 + 0.3 }}
-                viewport={{ once: true }}
-                className={`absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full z-10 ${
-                  exp.color === 'cyan' ? 'bg-cyan-400' : 'bg-purple-400'
-                }`}
-              />
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
 

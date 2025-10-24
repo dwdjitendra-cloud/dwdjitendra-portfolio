@@ -67,7 +67,7 @@ export default function About() {
         className="text-center mb-12 md:mb-16"
       >
         <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-4 md:mb-6 text-electric">
-          About Me
+          Who I Am
         </h2>
         <p className="text-lg md:text-xl text-blue-200 max-w-3xl mx-auto leading-relaxed">
           Passionate Computer Science Engineer crafting innovative solutions at the intersection of technology and creativity
@@ -180,7 +180,7 @@ export default function About() {
 
         {activeTab === 'journey' && (
           <div className="max-w-4xl mx-auto">
-            <h3 className="text-3xl font-bold text-blue-300 mb-8 text-center">My Professional Journey</h3>
+            <h3 className="text-3xl font-bold text-blue-300 mb-8 text-center">My Journey</h3>
             <div className="relative">
               {/* Timeline Line */}
               <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-400 to-blue-600 rounded-full"></div>
@@ -259,6 +259,7 @@ export default function About() {
 
         {activeTab === 'personal' && (
           <div className="max-w-4xl mx-auto">
+            <h3 className="text-3xl font-bold text-blue-300 mb-8 text-center">Beyond Code</h3>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}

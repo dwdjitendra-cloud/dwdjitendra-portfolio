@@ -149,7 +149,7 @@ export default function Navbar() {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className="hidden sm:flex items-center space-x-2 px-4 py-2 rounded-xl text-sm font-semibold bg-blue-600 hover:bg-blue-500 text-white"
+                  className="hidden sm:flex items-center space-x-2 px-4 py-2 rounded-xl text-sm font-semibold btn-accent"
                   title="View Resume"
                 >
                   <HiDocument className="w-4 h-4" />

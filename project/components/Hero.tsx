@@ -328,7 +328,12 @@ export default function Hero() {
             <p className="text-lg sm:text-xl md:text-2xl text-blue-200 mb-4 leading-relaxed px-2">
               Full Stack Developer • MERN Specialist • AI & ML Enthusiast
             </p>
-            <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-blue-300">
+            {/* Concise value proposition tagline */}
+            <p className="text-sm sm:text-base text-gray-300/90 italic mb-6 px-2">
+              I build fast, accessible web apps with clean, scalable code and delightful UX.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-blue-300"
+            >
               {[
                 { icon: '⚛️', text: 'React.js' },
                 { icon: '🟢', text: 'Node.js' },
@@ -366,7 +371,7 @@ export default function Hero() {
             onClick={() => smoothScrollTo('projects')}
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
-            className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 btn-secondary rounded-xl text-base sm:text-lg font-semibold relative overflow-hidden group"
+            className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 btn-accent rounded-xl text-base sm:text-lg font-semibold relative overflow-hidden group"
           >
             <span className="relative z-10 flex items-center justify-center space-x-2">
               <span>🚀</span>
