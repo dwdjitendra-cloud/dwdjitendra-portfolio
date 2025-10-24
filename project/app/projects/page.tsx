@@ -8,7 +8,7 @@ export default function Projects() {
     {
       title: 'Video Proctoring System',
       description:
-        'Full-stack AI-based proctoring system for online interviews with live monitoring, event logging, and integrity scoring. Integrated TensorFlow/MediaPipe for detection and automated PDF session reports for interviewers.',
+        'Full-stack AI-based proctoring system for online interviews with live monitoring, event logging, and integrity scoring. Solely developed the frontend, backend, and deployed the application.',
       techStack: ['React', 'Node.js', 'Express', 'MongoDB', 'TensorFlow', 'MediaPipe', 'JWT'],
       liveDemo: 'https://focus-object-detection-in-video-int-gray.vercel.app/',
       githubRepo: 'https://github.com/dwdjitendra-cloud/Focus-Object-Detection-in-Video-Interviews',
@@ -16,7 +16,7 @@ export default function Projects() {
     {
       title: 'SmartHealthBot',
       description:
-        'AI-powered healthcare chatbot that predicts possible diseases from symptoms and provides remedies, with doctor consultation via Razorpay integration. MERN backend with Flask APIs, ML models, and a responsive UI for a smooth experience.',
+        'AI-powered healthcare chatbot that predicts possible diseases from symptoms and provides remedies. Solely developed the frontend, backend, and deployed the application.',
       techStack: ['React', 'Node.js', 'Flask', 'MongoDB', 'ML', 'Razorpay', 'Tailwind'],
       liveDemo: 'https://smart-health-bot.vercel.app/',
       githubRepo: 'https://github.com/dwdjitendra-cloud/SmartHealth-Bot',
@@ -24,7 +24,7 @@ export default function Projects() {
     {
       title: 'Hostel Management System',
       description:
-        'Full-stack web app for managing student hostels with modules for rooms, fees, complaints, and student details. Implements CRUD operations with database integration to streamline hostel administration.',
+        'Full-stack web app for managing student hostels with modules for rooms, fees, complaints, and student details. Solely developed the frontend, backend, and deployed the application.',
       techStack: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT', 'Tailwind', 'Charts.js'],
       liveDemo: 'https://hms-opal.vercel.app/login',
       githubRepo: 'https://github.com/dwdjitendra-cloud/hostel-management',
@@ -32,7 +32,7 @@ export default function Projects() {
     {
       title: 'Fake Email & SMS Detector',
       description:
-        'Machine learning tool to identify phishing and fraudulent emails/SMS with improved accuracy. Uses Python, scikit-learn, and NLP to classify messages as safe or malicious.',
+        'Machine learning tool to identify phishing and fraudulent emails/SMS with improved accuracy. Solely developed the frontend, backend, and deployed the application.',
       techStack: ['Python', 'Scikit-learn', 'NLP', 'Flask', 'Pandas', 'NumPy'],
       liveDemo: 'https://spam-detector-vxjd.onrender.com/',
       githubRepo: 'https://github.com/dwdjitendra-cloud/spam-detector',

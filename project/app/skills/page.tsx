@@ -135,6 +135,18 @@ export default function SkillsPage() {
   return (
     <section id="skills" className="min-h-screen bg-cosmic pt-20 pb-16 px-4 md:px-6">
       <div className="max-w-7xl mx-auto">
+        {/* About Me Section */}
+        <section id="about-me" className="py-12 md:py-20 px-4 md:px-6 max-w-7xl mx-auto">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+              About Me
+            </h2>
+            <p className="text-lg md:text-xl text-gray-300">
+              Hi, I’m Jitendra Kumar Dodwadiya, a final-year B.Tech CSE student at IIEST Shibpur. I’m a MERN Stack Developer and Machine Learning enthusiast, passionate about building scalable products that blend AI with real-world impact.
+            </p>
+          </div>
+        </section>
+
         <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold text-electric text-center mb-8">Skills & Expertise</h1>
 
         <div className="flex justify-center mb-6">

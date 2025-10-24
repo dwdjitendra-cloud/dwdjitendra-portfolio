@@ -1,6 +1,8 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { useState, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -72,6 +74,21 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const [theme, setTheme] = useState('light');
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    setTheme(savedTheme);
+    document.documentElement.className = savedTheme;
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    document.documentElement.className = newTheme;
+    localStorage.setItem('theme', newTheme);
+  };
+
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} bg-gray-900 text-white overflow-x-hidden`}>
@@ -103,7 +120,17 @@ export default function RootLayout({
             })
           }}
         />
+        <header className="p-4 flex justify-between items-center">
+          <h1 className="text-xl font-bold">My Portfolio</h1>
+          <button
+            onClick={toggleTheme}
+            className="px-4 py-2 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition-all"
+          >
+            Toggle {theme === 'light' ? 'Dark' : 'Light'} Mode
+          </button>
+        </header>
         {children}
+        <Analytics />
       </body>
     </html>
   );

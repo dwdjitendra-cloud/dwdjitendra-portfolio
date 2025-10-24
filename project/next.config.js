@@ -19,4 +19,8 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+const { withAnalytics } = require('@vercel/analytics');
+
+module.exports = withAnalytics({
+  nextConfig,
+});
