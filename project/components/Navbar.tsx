@@ -100,12 +100,12 @@ export default function Navbar() {
                 className="flex items-center space-x-3"
               >
                 <div className="w-10 h-10 glass-blue rounded-lg flex items-center justify-center">
-                  {/* Removed initials 'JK' as requested; keeping a neutral glyph */}
-                  <span className="text-lg font-bold text-electric" aria-hidden>
+                  {/* Neutral glyph with solid, high-contrast color */}
+                  <span className="text-lg font-bold text-white" aria-hidden>
                     <HiCode className="w-5 h-5" />
                   </span>
                 </div>
-                <span className="text-xl font-bold text-electric hidden sm:block">
+                <span className="text-xl font-bold text-white hidden sm:block">
                   Jitendra
                 </span>
               </motion.div>

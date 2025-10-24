@@ -77,7 +77,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>
+      <body className={`${inter.className} cosmic-bg min-h-screen`}>
         {children}
       </body>
     </html>

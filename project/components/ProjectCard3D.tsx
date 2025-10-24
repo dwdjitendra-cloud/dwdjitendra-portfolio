@@ -74,7 +74,7 @@ export default function ProjectCard3D({
             />
             
             <motion.h3 
-              className="relative text-2xl font-bold text-glow mb-2"
+              className="relative text-2xl font-bold text-slate-100 mb-2 drop-shadow-sm"
               whileHover={{ scale: 1.02 }}
             >
               {title}

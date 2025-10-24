@@ -30,7 +30,9 @@ import {
   SiLinux,
   SiJsonwebtokens,
   SiSwagger,
+  SiDocker,
 } from "react-icons/si";
+import { FaAws } from "react-icons/fa";
 import { SiNextdotjs } from "react-icons/si";
 import { TbBrandVscode, TbDatabase } from "react-icons/tb";
 
@@ -119,6 +121,8 @@ export default function SkillsPage() {
           { name: "VS Code", icon: TbBrandVscode, color: "#007ACC" },
           { name: "Linux", icon: SiLinux, color: "#FCC624" },
           { name: "Postman", icon: SiPostman, color: "#FF6C37" },
+          { name: "Docker", icon: SiDocker, color: "#2496ED" },
+          { name: "AWS", icon: FaAws, color: "#FF9900" },
         ],
       },
     ],

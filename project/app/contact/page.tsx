@@ -151,7 +151,7 @@ export default function Contact() {
                   minLength={10}
                   rows={5}
                   className="w-full px-4 py-3 bg-black/20 border border-gray-600 rounded-lg focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 outline-none transition-all text-white placeholder-gray-400 resize-none"
-                  placeholder="Tell me about your project..."
+                  placeholder="Let’s connect and build something impactful together"
                 />
               </motion.div>
 

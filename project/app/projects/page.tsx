@@ -73,7 +73,7 @@ export default function Projects() {
           As a MERN developer and AI enthusiast, I build scalable, user‑centric products. Below are some highlights.
           <span className="hidden md:inline"> Click a card to explore details.</span>
           <span className="block mt-2 text-sm text-blue-200">
-            Want the full story? <a href="/about" className="underline hover:text-blue-300">Visit About Me</a>.
+            Want the full story? <a href="/#about" className="underline hover:text-blue-300">Visit About Me</a>.
           </span>
         </p>
       </motion.div>

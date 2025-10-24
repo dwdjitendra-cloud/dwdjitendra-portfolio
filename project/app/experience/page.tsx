@@ -87,7 +87,7 @@ export default function Experience() {
         >
           As a MERN developer and AI enthusiast, I bring scalable, pragmatic solutions to every problem I tackle.
           <span className="ml-1 text-blue-200">
-            <a href="/about" className="underline hover:text-blue-300">Learn more about me</a>.
+            <a href="/#about" className="underline hover:text-blue-300">Learn more about me</a>.
           </span>
         </motion.p>
 
