@@ -4,27 +4,50 @@ import { motion } from 'framer-motion';
 import ProjectCard3D from '@/components/ProjectCard3D';
 
 export default function Projects() {
+  const contributions = [
+    {
+      title: 'GitHub Contribution Assessment — Better Software Company',
+      tagline: 'Full-stack comment management module delivered via professional GitHub workflow.',
+      description:
+        'Engineered a robust React + Flask comment management module with end-to-end CRUD operations. Architected a modular frontend and integrated secure REST APIs, adhering to professional Git workflow and PR standards. Delivered a scalable, production-grade solution showcasing advanced full-stack development and collaborative engineering.\n\nOct 2025. Repository is private due to company confidentiality.',
+      techStack: ['React', 'Flask', 'REST API', 'Git', 'CRUD'],
+      githubRepo: '',
+      liveDemo: '',
+    },
+  ];
   const projects = [
     {
-      title: 'SmartHealthBot',
+      title: 'GitHub Contribution Assessment — Better Software Company',
+      tagline: 'Full-stack comment management module delivered via professional GitHub workflow.',
       description:
-        'AI-powered healthcare chatbot that predicts possible diseases from symptoms and provides remedies. Solely developed the frontend, backend, and deployed the application.',
+        'Engineered a robust React + Flask comment management module with end-to-end CRUD operations. Architected a modular frontend and integrated secure REST APIs, adhering to professional Git workflow and PR standards. Delivered a scalable, production-grade solution showcasing advanced full-stack development and collaborative engineering.\n\nOct 2025. Repository is private due to company confidentiality.',
+      techStack: ['React', 'Flask', 'REST API', 'Git', 'CRUD'],
+      githubRepo: '',
+      liveDemo: '',
+    },
+    {
+      title: 'SmartHealthBot',
+      tagline: 'AI-driven healthcare platform offering intelligent symptom analysis, doctor consultations, and secure online payments.',
+      description:
+        'Built a full-stack healthcare solution integrating AI-based symptom prediction, doctor consultation booking, and Razorpay payment gateway. The system leverages a Flask microservice for machine-learning inference and provides JWT-secured authentication for users. Features include real-time health analysis, patient record tracking.',
       techStack: ['React', 'Node.js', 'Flask', 'MongoDB', 'ML', 'Razorpay', 'Tailwind'],
       liveDemo: 'https://smart-health-bot.vercel.app/',
       githubRepo: 'https://github.com/dwdjitendra-cloud/SmartHealth-Bot',
     },
     {
       title: 'Video Proctoring System',
+      tagline: 'AI-powered virtual invigilation platform ensuring fair and secure online assessments.',
       description:
-        'Full-stack AI-based proctoring system for online interviews with live monitoring, event logging, and integrity scoring. Solely developed the frontend, backend, and deployed the application.',
+        'Developed a full-fledged SaaS-style proctoring platform that monitors candidates in real time using webcam and microphone feeds. Integrated TensorFlow/MediaPipe for face tracking, gaze detection, and activity recognition to flag suspicious behavior. The system logs all events, generates PDF/CSV reports, and computes integrity scores for post-exam analysis.',
       techStack: ['React', 'Node.js', 'Express', 'MongoDB', 'TensorFlow', 'MediaPipe', 'JWT'],
       liveDemo: 'https://focus-object-detection-in-video-int-gray.vercel.app/',
       githubRepo: 'https://github.com/dwdjitendra-cloud/Focus-Object-Detection-in-Video-Interviews',
     },
     {
       title: 'Hostel Management System',
+      tagline: 'Digital platform automating hostel operations, room allocation, and student management.',
       description:
-        'Full-stack web app for managing student hostels with modules for rooms, fees, complaints, and student details. Solely developed the frontend, backend, and deployed the application.',
+        'Designed and implemented a full-stack web application for managing hostel activities including student registration, room assignment and complaint management. Developed secure admin and warden dashboards with REST APIs and JWT authentication. Enhanced efficiency by digitizing manual processes and enabling real-time data access.',
       techStack: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT', 'Tailwind', 'Charts.js'],
       liveDemo: 'https://hms-opal.vercel.app/login',
       githubRepo: 'https://github.com/dwdjitendra-cloud/hostel-management',
@@ -39,8 +62,9 @@ export default function Projects() {
     },
     {
       title: 'Fake Email & SMS Detector',
+      tagline: 'Machine learning-based application to detect phishing and scam messages using NLP techniques.',
       description:
-        'Machine learning tool to identify phishing and fraudulent emails/SMS with improved accuracy. Solely developed the frontend, backend, and deployed the application.',
+        'Created a text-classification system capable of identifying fraudulent emails and SMS messages using natural language processing and supervised learning models. Trained on public phishing datasets and deployed via a Flask-based web interface for real-time predictions. The model achieved strong accuracy in detecting malicious content and preventing user deception.',
       techStack: ['Python', 'Scikit-learn', 'NLP', 'Flask', 'Pandas', 'NumPy'],
       liveDemo: 'https://spam-detector-vxjd.onrender.com/',
       githubRepo: 'https://github.com/dwdjitendra-cloud/spam-detector',
