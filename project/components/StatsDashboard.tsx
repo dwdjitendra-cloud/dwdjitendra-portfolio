@@ -11,9 +11,9 @@ export default function StatsDashboard() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
-      <h2 className="text-4xl md:text-5xl font-extrabold mb-10 text-center bg-gradient-to-r from-blue-400 via-yellow-400 to-purple-500 bg-clip-text text-transparent drop-shadow-lg tracking-tight">
-        <span className="inline-block px-4 py-2 rounded-xl shadow-xl border-2 border-blue-400/30 backdrop-blur-lg">
-          <span className="mr-2">🚀</span>My Coding Stats
+      <h2 className="text-4xl md:text-5xl font-extrabold mb-10 text-center text-blue-300 drop-shadow-lg tracking-tight">
+        <span className="inline-block px-6 py-3 rounded-2xl shadow-xl border-2 border-blue-400/40 bg-gradient-to-r from-blue-900 via-gray-900 to-yellow-700 text-white backdrop-blur-lg">
+          <span className="mr-2">�</span>My Coding Stats
         </span>
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
@@ -28,13 +28,30 @@ export default function StatsDashboard() {
           ) : ghError ? (
             <p className="text-red-400">{ghError}</p>
           ) : github ? (
-            <ul className="space-y-3 text-lg w-full">
-              <li className="flex justify-between"><span>Followers:</span> <span className="font-bold">{typeof github.followers === 'number' ? github.followers : JSON.stringify(github.followers)}</span></li>
-              <li className="flex justify-between"><span>Public Repos:</span> <span className="font-bold">{typeof github.publicRepos === 'number' ? github.publicRepos : JSON.stringify(github.publicRepos)}</span></li>
-              <li className="flex justify-between"><span>Total Stars:</span> <span className="font-bold">{typeof github.totalStars === 'number' ? github.totalStars : JSON.stringify(github.totalStars)}</span></li>
-              <li className="flex justify-between"><span>Total PRs:</span> <span className="font-bold">{typeof github.totalPRs === 'number' ? github.totalPRs : JSON.stringify(github.totalPRs)}</span></li>
-              <li className="flex justify-between"><span>Total Contributions:</span> <span className="font-bold">{typeof github.totalContributions === 'number' ? github.totalContributions : JSON.stringify(github.totalContributions)}</span></li>
-            </ul>
+            <div className="w-full">
+              <div className="grid grid-cols-2 gap-4 text-lg">
+                <div className="bg-blue-950/60 rounded-xl p-4 flex flex-col items-center">
+                  <span className="text-blue-300 font-bold text-2xl">{typeof github.followers === 'number' ? github.followers : JSON.stringify(github.followers)}</span>
+                  <span className="text-sm text-blue-200 mt-1">Followers</span>
+                </div>
+                <div className="bg-blue-950/60 rounded-xl p-4 flex flex-col items-center">
+                  <span className="text-blue-300 font-bold text-2xl">{typeof github.publicRepos === 'number' ? github.publicRepos : JSON.stringify(github.publicRepos)}</span>
+                  <span className="text-sm text-blue-200 mt-1">Public Repos</span>
+                </div>
+                <div className="bg-blue-950/60 rounded-xl p-4 flex flex-col items-center">
+                  <span className="text-blue-300 font-bold text-2xl">{typeof github.totalStars === 'number' ? github.totalStars : JSON.stringify(github.totalStars)}</span>
+                  <span className="text-sm text-blue-200 mt-1">Total Stars</span>
+                </div>
+                <div className="bg-blue-950/60 rounded-xl p-4 flex flex-col items-center">
+                  <span className="text-blue-300 font-bold text-2xl">{typeof github.totalPRs === 'number' ? github.totalPRs : JSON.stringify(github.totalPRs)}</span>
+                  <span className="text-sm text-blue-200 mt-1">Total PRs</span>
+                </div>
+                <div className="col-span-2 bg-blue-950/60 rounded-xl p-4 flex flex-col items-center">
+                  <span className="text-blue-300 font-bold text-2xl">{typeof github.totalContributions === 'number' ? github.totalContributions : github.totalContributions && typeof github.totalContributions === 'object' ? Object.values(github.totalContributions).reduce((a, b) => a + b, 0) : JSON.stringify(github.totalContributions)}</span>
+                  <span className="text-sm text-blue-200 mt-1">Total Contributions</span>
+                </div>
+              </div>
+            </div>
           ) : null}
           <button
             className="mt-6 px-6 py-2 bg-blue-600 rounded-xl hover:bg-blue-700 transition text-lg font-semibold shadow-md"
@@ -54,14 +71,34 @@ export default function StatsDashboard() {
           ) : lcError ? (
             <p className="text-red-400">{lcError}</p>
           ) : leetcode ? (
-            <ul className="space-y-3 text-lg w-full">
-              <li className="flex justify-between"><span>Total Solved:</span> <span className="font-bold">{typeof leetcode.totalSolved === 'number' ? leetcode.totalSolved : JSON.stringify(leetcode.totalSolved)}</span></li>
-              <li className="flex justify-between"><span>Easy:</span> <span className="font-bold">{typeof leetcode.easySolved === 'number' ? leetcode.easySolved : JSON.stringify(leetcode.easySolved)}</span></li>
-              <li className="flex justify-between"><span>Medium:</span> <span className="font-bold">{typeof leetcode.mediumSolved === 'number' ? leetcode.mediumSolved : JSON.stringify(leetcode.mediumSolved)}</span></li>
-              <li className="flex justify-between"><span>Hard:</span> <span className="font-bold">{typeof leetcode.hardSolved === 'number' ? leetcode.hardSolved : JSON.stringify(leetcode.hardSolved)}</span></li>
-              <li className="flex justify-between"><span>Rating:</span> <span className="font-bold">{typeof leetcode.rating === 'number' ? leetcode.rating : (leetcode.rating ?? 'N/A')}</span></li>
-              <li className="flex justify-between"><span>Rank:</span> <span className="font-bold">{typeof leetcode.ranking === 'number' ? leetcode.ranking : (leetcode.ranking ?? 'N/A')}</span></li>
-            </ul>
+            <div className="w-full">
+              <div className="grid grid-cols-2 gap-4 text-lg">
+                <div className="bg-yellow-900/60 rounded-xl p-4 flex flex-col items-center">
+                  <span className="text-yellow-200 font-bold text-2xl">{typeof leetcode.totalSolved === 'number' ? leetcode.totalSolved : JSON.stringify(leetcode.totalSolved)}</span>
+                  <span className="text-sm text-yellow-100 mt-1">Total Solved</span>
+                </div>
+                <div className="bg-yellow-900/60 rounded-xl p-4 flex flex-col items-center">
+                  <span className="text-yellow-200 font-bold text-2xl">{typeof leetcode.easySolved === 'number' ? leetcode.easySolved : JSON.stringify(leetcode.easySolved)}</span>
+                  <span className="text-sm text-yellow-100 mt-1">Easy</span>
+                </div>
+                <div className="bg-yellow-900/60 rounded-xl p-4 flex flex-col items-center">
+                  <span className="text-yellow-200 font-bold text-2xl">{typeof leetcode.mediumSolved === 'number' ? leetcode.mediumSolved : JSON.stringify(leetcode.mediumSolved)}</span>
+                  <span className="text-sm text-yellow-100 mt-1">Medium</span>
+                </div>
+                <div className="bg-yellow-900/60 rounded-xl p-4 flex flex-col items-center">
+                  <span className="text-yellow-200 font-bold text-2xl">{typeof leetcode.hardSolved === 'number' ? leetcode.hardSolved : JSON.stringify(leetcode.hardSolved)}</span>
+                  <span className="text-sm text-yellow-100 mt-1">Hard</span>
+                </div>
+                <div className="bg-yellow-900/60 rounded-xl p-4 flex flex-col items-center">
+                  <span className="text-yellow-200 font-bold text-2xl">{typeof leetcode.rating === 'number' ? leetcode.rating : (leetcode.rating ?? 'N/A')}</span>
+                  <span className="text-sm text-yellow-100 mt-1">Contest Rating</span>
+                </div>
+                <div className="bg-yellow-900/60 rounded-xl p-4 flex flex-col items-center">
+                  <span className="text-yellow-200 font-bold text-2xl">{typeof leetcode.ranking === 'number' ? leetcode.ranking : (leetcode.ranking ?? 'N/A')}</span>
+                  <span className="text-sm text-yellow-100 mt-1">Rank</span>
+                </div>
+              </div>
+            </div>
           ) : null}
           <button
             className="mt-6 px-6 py-2 bg-yellow-500 rounded-xl hover:bg-yellow-600 transition text-lg font-semibold shadow-md"
