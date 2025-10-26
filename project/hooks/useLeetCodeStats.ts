@@ -31,7 +31,7 @@ export function useLeetCodeStats() {
         mediumSolved: data.mediumSolved,
         hardSolved: data.hardSolved,
         ranking: data.ranking || null,
-        rating: data.contributionPoints || null,
+        rating: data.rating || data.contestRating || null,
       });
     } catch (err: any) {
       setError('Failed to fetch LeetCode stats');

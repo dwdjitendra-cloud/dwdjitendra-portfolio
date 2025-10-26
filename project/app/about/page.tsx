@@ -5,64 +5,28 @@ import StatsDashboard from '../../components/StatsDashboard';
 
 export default function About() {
   return (
-    <section id="about" className="py-12 md:py-20 px-4 md:px-6 max-w-7xl mx-auto">
+    <section id="about" className="py-12 md:py-20 px-4 md:px-6 max-w-4xl mx-auto">
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-        className="text-center mb-12 md:mb-16"
+        className="mb-10"
       >
-        <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-4 md:mb-6 text-electric">
-          About
-        </h2>
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-electric text-center">About Me</h2>
+        <div className="card-enhanced p-8 text-lg md:text-xl text-gray-200 leading-relaxed shadow-lg">
+          Hi, I’m <span className="font-bold text-blue-300">Jitendra Kumar Dodwadiya</span>, a final-year B.Tech Computer Science Engineering student at <span className="font-bold text-blue-200">Indian Institute of Engineering Science and Technology (IIEST) Shibpur</span>, passionate about building scalable and intelligent digital products that make a real impact.<br /><br />
+          I specialize in the <span className="font-bold text-blue-300">MERN Stack</span> and enjoy combining <span className="font-bold text-blue-300">AI and Machine Learning</span> with full-stack development to create innovative solutions.<br /><br />
+          Over the years, I’ve worked as a <span className="font-bold text-blue-300">Software Engineer Intern at Appco Software</span>, where I developed production-ready MERN applications, and as an <span className="font-bold text-blue-300">AI Prompt Engineer at Soul AI</span>, where I refined LLM outputs through structured prompt design and evaluation.<br /><br />
+          <span className="italic text-blue-200">"I believe great engineering is not just about code—it’s about clarity, impact, and responsibility."</span>
+        </div>
       </motion.div>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+        className="mt-8"
       >
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          className="space-y-6"
-        >
-          <div className="card-enhanced p-8">
-            <h3 className="text-2xl font-bold text-blue-300 mb-6">🎯 What Drives Me</h3>
-            <div className="space-y-4">
-              {[
-                { icon: '💡', title: 'Innovation', desc: 'Creating novel solutions to complex problems' },
-                { icon: '🤝', title: 'Collaboration', desc: 'Building amazing things with great teams' },
-                { icon: '📚', title: 'Learning', desc: 'Continuously expanding knowledge and skills' },
-                { icon: '🌍', title: 'Impact', desc: 'Making technology accessible and meaningful' }
-              ].map((item, index) => (
-                <motion.div
-                  key={item.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="flex items-start space-x-4 p-4 glass-blue rounded-xl"
-                >
-                  <span className="text-2xl">{item.icon}</span>
-                  <div>
-                    <h4 className="font-semibold text-blue-200">{item.title}</h4>
-                    <p className="text-gray-400 text-sm">{item.desc}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="space-y-6"
-        >
-          <StatsDashboard />
-        </motion.div>
+        <StatsDashboard />
       </motion.div>
     </section>
   );
