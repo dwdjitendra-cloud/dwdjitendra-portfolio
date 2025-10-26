@@ -307,18 +307,8 @@ export default function Hero() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            Jitendra
+            Jitendra Kumar Dodwadiya
           </motion.h1>
-          
-          <motion.h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 sm:mb-6 text-slate-200"
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.7 }}
-          >
-            Kumar Dodwadiya
-          </motion.h2>
-          
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -328,9 +318,8 @@ export default function Hero() {
             <p className="text-lg sm:text-xl md:text-2xl text-blue-200 mb-4 leading-relaxed px-2">
               Full Stack Developer • MERN Specialist • AI & ML Enthusiast
             </p>
-            {/* Concise value proposition tagline */}
             <p className="text-sm sm:text-base text-gray-300/90 italic mb-6 px-2">
-              I build fast, accessible web apps with clean, scalable code and delightful UX.
+              I build scalable, AI-powered web apps that deliver real-world impact.
             </p>
             <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-blue-300"
             >

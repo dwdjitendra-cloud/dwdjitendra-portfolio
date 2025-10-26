@@ -67,10 +67,12 @@ export default function About() {
         className="text-center mb-12 md:mb-16"
       >
         <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-4 md:mb-6 text-electric">
-          Who I Am
+          About Me / My Story
         </h2>
         <p className="text-lg md:text-xl text-blue-200 max-w-3xl mx-auto leading-relaxed">
-          Passionate Computer Science Engineer crafting innovative solutions at the intersection of technology and creativity
+          I’m a final-year B.Tech CSE student at IIEST Shibpur, passionate about blending full-stack development with AI-driven innovation. I’ve built scalable web apps, intelligent systems, and production-ready software during my internships at Appco Software and Soul AI.<br /><br />
+          My work focuses on building real-world solutions — from AI-powered healthcare to proctoring systems — with a mix of creativity, discipline, and strong technical execution.<br /><br />
+          That’s it. Short, personal, and complete.
         </p>
       </motion.div>
 

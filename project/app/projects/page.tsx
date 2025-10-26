@@ -118,7 +118,7 @@ export default function Projects() {
         </motion.div>
 
         {/* Interactive 3D Project Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-20">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 mb-12 md:mb-20">
           {projects.map((project, index) => (
             <ProjectCard3D
               key={project.title}
