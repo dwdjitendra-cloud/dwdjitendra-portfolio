@@ -13,7 +13,7 @@ export default function StatsDashboard() {
     <div className="max-w-4xl mx-auto px-4 py-8">
       <h2 className="text-4xl md:text-5xl font-extrabold mb-10 text-center text-blue-300 drop-shadow-lg tracking-tight">
         <span className="inline-block px-6 py-3 rounded-2xl shadow-xl border-2 border-blue-400/40 bg-gradient-to-r from-blue-900 via-gray-900 to-yellow-700 text-white backdrop-blur-lg">
-          <span className="mr-2">�</span>My Coding Stats
+          <span className="mr-2">💻</span>My Coding Stats
         </span>
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
@@ -90,7 +90,7 @@ export default function StatsDashboard() {
                   <span className="text-sm text-yellow-100 mt-1">Hard</span>
                 </div>
                 <div className="bg-yellow-900/60 rounded-xl p-4 flex flex-col items-center">
-                  <span className="text-yellow-200 font-bold text-2xl">{typeof leetcode.rating === 'number' ? leetcode.rating : (leetcode.rating ?? 'N/A')}</span>
+                  <span className="text-yellow-200 font-bold text-2xl">{leetcode && (typeof leetcode.rating === 'number' && leetcode.rating > 0 ? leetcode.rating : '1719')}</span>
                   <span className="text-sm text-yellow-100 mt-1">Contest Rating</span>
                 </div>
                 <div className="bg-yellow-900/60 rounded-xl p-4 flex flex-col items-center">
