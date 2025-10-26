@@ -13,7 +13,7 @@ export default function StatsDashboard() {
     <div className="max-w-4xl mx-auto px-4 py-8">
       <h2 className="text-4xl md:text-5xl font-extrabold mb-10 text-center bg-gradient-to-r from-blue-400 via-yellow-400 to-purple-500 bg-clip-text text-transparent drop-shadow-lg tracking-tight">
         <span className="inline-block px-4 py-2 rounded-xl shadow-xl border-2 border-blue-400/30 backdrop-blur-lg">
-          <span className="mr-2">�</span>My Coding Stats
+          <span className="mr-2">🚀</span>My Coding Stats
         </span>
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
@@ -33,27 +33,7 @@ export default function StatsDashboard() {
               <li className="flex justify-between"><span>Public Repos:</span> <span className="font-bold">{typeof github.publicRepos === 'number' ? github.publicRepos : JSON.stringify(github.publicRepos)}</span></li>
               <li className="flex justify-between"><span>Total Stars:</span> <span className="font-bold">{typeof github.totalStars === 'number' ? github.totalStars : JSON.stringify(github.totalStars)}</span></li>
               <li className="flex justify-between"><span>Total PRs:</span> <span className="font-bold">{typeof github.totalPRs === 'number' ? github.totalPRs : JSON.stringify(github.totalPRs)}</span></li>
-              <li className="flex justify-between">
-                <span>Total Contributions:</span>
-                <span className="font-bold">
-                  {(() => {
-                    if (
-                      github.totalContributions &&
-                      typeof github.totalContributions === 'object' &&
-                      !Array.isArray(github.totalContributions)
-                    ) {
-                      const contribObj = github.totalContributions as Record<string, number>;
-                      const years = Object.keys(contribObj).sort();
-                      return years.map(year => (
-                        <span key={year} className="block text-blue-200">{year}: <span className="text-white font-bold">{contribObj[year]}</span></span>
-                      ));
-                    }
-                    return typeof github.totalContributions === 'number'
-                      ? github.totalContributions
-                      : JSON.stringify(github.totalContributions);
-                  })()}
-                </span>
-              </li>
+              <li className="flex justify-between"><span>Total Contributions:</span> <span className="font-bold">{typeof github.totalContributions === 'number' ? github.totalContributions : JSON.stringify(github.totalContributions)}</span></li>
             </ul>
           ) : null}
           <button
