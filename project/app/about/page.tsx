@@ -67,13 +67,8 @@ export default function About() {
         className="text-center mb-12 md:mb-16"
       >
         <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-4 md:mb-6 text-electric">
-          About Me / My Story
+          About
         </h2>
-        <p className="text-lg md:text-xl text-blue-200 max-w-3xl mx-auto leading-relaxed">
-          I’m a final-year B.Tech CSE student at IIEST Shibpur, passionate about blending full-stack development with AI-driven innovation. I’ve built scalable web apps, intelligent systems, and production-ready software during my internships at Appco Software and Soul AI.<br /><br />
-          My work focuses on building real-world solutions — from AI-powered healthcare to proctoring systems — with a mix of creativity, discipline, and strong technical execution.<br /><br />
-          That’s it. Short, personal, and complete.
-        </p>
       </motion.div>
 
       {/* Tab Navigation */}
@@ -125,24 +120,7 @@ export default function About() {
               transition={{ duration: 0.8 }}
               className="space-y-6"
             >
-              <div className="card-enhanced p-8">
-                <h3 className="text-2xl font-bold text-blue-300 mb-4">🚀 About Me</h3>
-                <p className="text-gray-300 leading-relaxed mb-4">
-                  I'm a Computer Science Engineering student at Indian Institute of Engineering Science and Technology (IIEST) Shibpur, passionate about creating 
-                  impactful digital solutions. My journey spans full-stack development, AI/ML engineering, 
-                  and innovative problem-solving across various domains.
-                </p>
-                <p className="text-gray-300 leading-relaxed mb-4">
-                  As a Software Engineer Intern at Appco Software and AI Prompt Engineer at Soul AI, I've 
-                  gained valuable experience in developing scalable MERN applications and optimizing AI 
-                  systems for better performance and user experience.
-                </p>
-                <p className="text-gray-300 leading-relaxed">
-                  I'm driven by the pursuit of excellence in technology and innovation. My projects range 
-                  from AI-powered healthcare solutions to video proctoring systems, always focusing on 
-                  real-world impact and technical excellence.
-                </p>
-              </div>
+              {/* About Me card removed to eliminate duplicate/verbose content */}
             </motion.div>
 
             <motion.div
@@ -209,9 +187,9 @@ export default function About() {
                           {item.year}
                         </span>
                       </div>
-                      <h4 className="text-xl font-bold text-blue-300 mb-2">{item.title}</h4>
-                      <p className="text-blue-200 font-medium mb-2">{item.company}</p>
-                      <p className="text-gray-300 text-sm">{item.description}</p>
+                      <h4 className="text-xl font-bold text-blue-300 mb-2">{typeof item.title === 'string' ? item.title : JSON.stringify(item.title)}</h4>
+                      <p className="text-blue-200 font-medium mb-2">{typeof item.company === 'string' ? item.company : JSON.stringify(item.company)}</p>
+                      <p className="text-gray-300 text-sm">{typeof item.description === 'string' ? item.description : JSON.stringify(item.description)}</p>
                     </div>
                   </div>
                   
