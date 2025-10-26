@@ -1,3 +1,4 @@
+"use client";
 import StatsDashboard from '../../components/StatsDashboard';
 
 export default function StatsPage() {

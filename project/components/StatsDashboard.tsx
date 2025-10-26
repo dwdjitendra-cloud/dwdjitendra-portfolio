@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import { useGitHubStats } from '../hooks/useGitHubStats';
 import { useLeetCodeStats } from '../hooks/useLeetCodeStats';
