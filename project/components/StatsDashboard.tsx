@@ -25,11 +25,11 @@ export default function StatsDashboard() {
             <p className="text-red-400">{ghError}</p>
           ) : github ? (
             <ul className="space-y-2">
-              <li>Followers: <span className="font-bold">{github.followers}</span></li>
-              <li>Public Repos: <span className="font-bold">{github.publicRepos}</span></li>
-              <li>Total Stars: <span className="font-bold">{github.totalStars}</span></li>
-              <li>Total PRs: <span className="font-bold">{github.totalPRs}</span></li>
-              <li>Total Contributions: <span className="font-bold">{github.totalContributions}</span></li>
+              <li>Followers: <span className="font-bold">{typeof github.followers === 'number' ? github.followers : JSON.stringify(github.followers)}</span></li>
+              <li>Public Repos: <span className="font-bold">{typeof github.publicRepos === 'number' ? github.publicRepos : JSON.stringify(github.publicRepos)}</span></li>
+              <li>Total Stars: <span className="font-bold">{typeof github.totalStars === 'number' ? github.totalStars : JSON.stringify(github.totalStars)}</span></li>
+              <li>Total PRs: <span className="font-bold">{typeof github.totalPRs === 'number' ? github.totalPRs : JSON.stringify(github.totalPRs)}</span></li>
+              <li>Total Contributions: <span className="font-bold">{typeof github.totalContributions === 'number' ? github.totalContributions : JSON.stringify(github.totalContributions)}</span></li>
             </ul>
           ) : null}
           <button
@@ -51,12 +51,12 @@ export default function StatsDashboard() {
             <p className="text-red-400">{lcError}</p>
           ) : leetcode ? (
             <ul className="space-y-2">
-              <li>Total Solved: <span className="font-bold">{leetcode.totalSolved}</span></li>
-              <li>Easy: <span className="font-bold">{leetcode.easySolved}</span></li>
-              <li>Medium: <span className="font-bold">{leetcode.mediumSolved}</span></li>
-              <li>Hard: <span className="font-bold">{leetcode.hardSolved}</span></li>
-              <li>Rating: <span className="font-bold">{leetcode.rating ?? 'N/A'}</span></li>
-              <li>Rank: <span className="font-bold">{leetcode.ranking ?? 'N/A'}</span></li>
+              <li>Total Solved: <span className="font-bold">{typeof leetcode.totalSolved === 'number' ? leetcode.totalSolved : JSON.stringify(leetcode.totalSolved)}</span></li>
+              <li>Easy: <span className="font-bold">{typeof leetcode.easySolved === 'number' ? leetcode.easySolved : JSON.stringify(leetcode.easySolved)}</span></li>
+              <li>Medium: <span className="font-bold">{typeof leetcode.mediumSolved === 'number' ? leetcode.mediumSolved : JSON.stringify(leetcode.mediumSolved)}</span></li>
+              <li>Hard: <span className="font-bold">{typeof leetcode.hardSolved === 'number' ? leetcode.hardSolved : JSON.stringify(leetcode.hardSolved)}</span></li>
+              <li>Rating: <span className="font-bold">{typeof leetcode.rating === 'number' ? leetcode.rating : (leetcode.rating ?? 'N/A')}</span></li>
+              <li>Rank: <span className="font-bold">{typeof leetcode.ranking === 'number' ? leetcode.ranking : (leetcode.ranking ?? 'N/A')}</span></li>
             </ul>
           ) : null}
           <button
