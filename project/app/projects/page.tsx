@@ -6,7 +6,7 @@ import ProjectCard3D from '@/components/ProjectCard3D';
 export default function Projects() {
   // Contributions section data
   const contribution = {
-    title: 'GitHub Contribution Assessment — Better Software Company',
+    title: 'GitHub Contribution — Better Software Company',
     date: 'Oct 2025',
     description:
       'Developed and submitted a React + Flask-based comments management module implementing full CRUD functionality for tasks. Designed a responsive frontend interface in React and TypeScript, integrated it seamlessly with Flask REST APIs, and followed professional Git branching and pull request workflows. The contribution demonstrated strong full-stack engineering discipline, clean coding standards, and practical collaboration in a production-style environment.',
